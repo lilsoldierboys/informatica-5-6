@@ -1,13 +1,18 @@
 def main():
-    name = input("What is your name? ")
-    color = input("Color: ")
-    adjective = input("Adjective: " )
-    goal = input("Goal: ")
+    name = input("What is your name? ").strip().title()
+    color = input("Color: ").strip().lower()
+    adjective = input("Adjective: " ).strip().lower()
+    goal = input("Goal: ").lower().strip()
 
-    print("Hello \n", name)
+    print("Hello ", name)
 
     print("This is your: ")
 
     print(f"At dawn the sky turned {color}, and the air felt {adjective}. I decided today I will finally {goal}.")
+
+    yelling = f"At dawn the sky turned {color}, and the air felt {adjective}. I decided today I will finally {goal}."
+
+    print(yelling.upper())
+
 
 main()
