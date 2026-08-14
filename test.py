@@ -4,7 +4,7 @@ from openai import OpenAI
 # Initialize client using NVIDIA's base URL
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
-    api_key=os.environ.get("NVIDIA_API_KEY", "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")  # Fallback to string if env var isn't set
+    api_key=os.environ.get("NVIDIA_API_KEY", "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")  # Fallback to string if env var isn't set
 )
 
 # 1. Capture user input from the console
@@ -12,7 +12,7 @@ user_prompt = input("Ask the AI something: ")
 
 # 2. Pass user_prompt into the 'content' field
 completion = client.chat.completions.create(
-    model="openai/gpt-oss-20b",
+    model="openai/gpt-oss-120b",
     messages=[
         {"role": "user", "content": user_prompt}
     ],
