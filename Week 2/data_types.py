@@ -9,11 +9,15 @@ for i in range(5):
 
 P = 5*2 + l*2
 
-print(P)
+print("Perimeter: ", P)
+
+A = l * 5
 
 
 
-d = (l ** 2 + 5 ** 2)**1/2
+d = (l ** 2 + 5 ** 2) ** (1/2)
 
-print(d)
+
+print("Area: ", A)
+print("Diagonal: ", d)
 
