@@ -56,7 +56,7 @@ def exo():
                         time = speed1 + speed2 + speed3 + speed4 + speed5
                         print(f"{time} seconds")
 
-def three()
+def three():
     if exact_h >= 85000 and exact_h <= 700000:
                 t_i_l = exact_h - 85000
                 speed2 = t_i_l / 500
