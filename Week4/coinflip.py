@@ -1,22 +1,26 @@
 import random
 
-guess = int(input("Heads or Tails: "))
+a = 0
+while a < 3:
 
-outcome = random.randint(1,2)
+    guess = input("Heads or Tails: ").lower().strip
+    coin = ["heads", "tails"]
+    outcome = random.choice(coin)
 
-if outcome == 1:
-    print("Heads")
-elif outcome == 2:
-    print("Tails")
+    if outcome == "heads":
+        print("heads")
+    elif outcome == "tails":
+        print("tails")
 
-if guess == outcome:
-    print("You win!")
-elif guess != outcome:
-    print("You lose :(")
-else:
-    print("invalid choice")
+    if guess == outcome:
+        print("You win!")
+    elif guess != outcome:
+        print("You lose :(")
+    else:
+        print("invalid choice")
 
 
+    a += 1
 
 
 
