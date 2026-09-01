@@ -14,10 +14,9 @@ while a < 3:
 
     if guess == outcome:
         print("You win!")
+        break
     elif guess != outcome:
         print("You lose :(")
-    else:
-        print("invalid choice")
 
 
     a += 1
