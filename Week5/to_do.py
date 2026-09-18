@@ -11,8 +11,8 @@ while True:
     print(f"tasks to do {len(to_do)}")
     if answ == "remove":
 
-        #if answ == "complete all":
-             #to_do.clear()
+        if answ == "complete all":
+             to_do.clear()
         else:
             remove = input("What task do you want to remove? ")
             to_do.remove(remove)
