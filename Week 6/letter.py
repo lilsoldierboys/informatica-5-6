@@ -1,7 +1,7 @@
 names = ["mario", "luigi", "peach", "bowser", "Daisy", "Yoshi", "Toad", "Rosalina"]
 sender = names[2]
 num = 0
-for i in range(7):
+for i in range(len(names)):
     receiver = names[num]
     num += 1
     if receiver == "peach":
