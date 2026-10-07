@@ -24,25 +24,26 @@ good = True
 
 while good:
     tab = int(init)
-    for i in range(max_value):
-        print(f"You will be tested on the {tab} table")
-        print(f"{start} times {num} is..")
-        while dang3:
-            try:
-                user_input = int(input("Answer: "))
-                dang3 = False
-            except ValueError:
-                print("Input a number")
-                user_input = int(input("Answer: "))
+    if tab <= 10:
+        for i in range(max_value):
+            print(f"You will be tested on the {tab} table")
+            print(f"{start} times {num} is..")
+            while dang3:
+                try:
+                    user_input = int(input("Answer: "))
+                    dang3 = False
+                except ValueError:
+                    print("Input a number")
+                    user_input = int(input("Answer: "))
 
-        dang3 = True
-        if user_input == (tab * num):
-            print("Correct")
-            num += 1
-        else:
-            print("Incorrect")
-            wrong += 1
-            num += 1
+            dang3 = True
+            if user_input == (tab * num):
+                print("Correct")
+                num += 1
+            else:
+                print("Incorrect")
+                wrong += 1
+                num += 1
     good = False
 
 
