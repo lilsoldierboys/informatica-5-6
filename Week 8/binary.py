@@ -29,7 +29,7 @@ def binary_to_decimal(a):
     if list[7] == "1":
         value += 128
 
-    print(value)
+    print(f"Decimal value: {value}")
 
 
 
