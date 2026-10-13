@@ -32,3 +32,7 @@
 #
 #
 #
+import random
+with open("words.txt") as new_file:
+    content = new_file.read().splitlines()
+print(random.choice(content))
