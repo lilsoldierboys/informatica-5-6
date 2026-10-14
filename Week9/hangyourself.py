@@ -35,4 +35,7 @@
 import random
 with open("words.txt") as new_file:
     content = new_file.read().splitlines()
-print(random.choice(content))
+word = random.choice(content)
+print(word)
+amount_l = len(word)
+print(" _ "*amount_l)
