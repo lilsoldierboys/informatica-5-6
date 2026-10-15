@@ -37,5 +37,13 @@ with open("words.txt") as new_file:
     content = new_file.read().splitlines()
 word = random.choice(content)
 print(word)
+a = 1
 amount_l = len(word)
 print(" _ "*amount_l)
+att = input("Enter guess: ")
+for letter in word:
+    if letter == att:
+
+    else:
+        print("incorrect")
+    print(location)
