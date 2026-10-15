@@ -28,22 +28,46 @@
 #
 #
 #
-#
-#
-#
-#
+
 import random
+
+
+
+
 with open("words.txt") as new_file:
     content = new_file.read().splitlines()
 word = random.choice(content)
 print(word)
-a = 1
-amount_l = len(word)
-print(" _ "*amount_l)
-att = input("Enter guess: ")
-for letter in word:
-    if letter == att:
+word = word.lower()
+ats = 10
+
+hint = ["_"] * len(word)
+inco_w = [" "]
+
+
+while ats > 0:
+    print(" ".join(hint))
+
+    att = input("Enter guess: ").lower()
+
+
+    if att in word and att not in hint:
+        for letter in range(len(word)):
+            if word[letter] == att:
+                hint[letter] = att
+        print("Great guess!")
+        print(" ".join(hint))
+    elif att in hint:
+        print("Already guessed that one")
 
     else:
         print("incorrect")
-    print(location)
+        inco_w.append(att)
+        print(" ".join(inco_w))
+        ats -= 1
+        print(f"Attempts: {ats}")
+
+    if "_" not in hint:
+        final = ("".join(hint))
+        print(f"You did it you guessed the word the word was: {final}")
+        break
